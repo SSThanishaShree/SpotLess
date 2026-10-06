@@ -4,13 +4,16 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-brand">
-        <NavLink to="/" className="brand-logo">
+        <NavLink to="/" className="brand-logo" aria-label="SpotLess Home">
           Spot<span>Less</span>
         </NavLink>
-        <span className="brand-tagline">Spot it. Track it. Stop it.</span>
+        <div className="brand-tagline-group">
+          <span className="brand-tagline">Spot it. Track it. Stop it.</span>
+          <span className="prototype-chip">Civic Prototype</span>
+        </div>
       </div>
 
-      <nav className="navbar-links">
+      <nav className="navbar-links" aria-label="Primary Navigation">
         <NavLink
           to="/"
           className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
