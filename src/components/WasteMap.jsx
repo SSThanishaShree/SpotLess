@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const hotspots = [
   { id: "koramangala", name: "Koramangala", type: "Recurring", severity: "Critical", reports: 17, x: 44, y: 56 },
@@ -15,9 +16,11 @@ const markerColors = {
 };
 
 export default function WasteMap() {
+  const navigate = useNavigate();
+
   const goToHotspot = (id) => {
     if (id === "koramangala") {
-      window.location.href = "/hotspot/koramangala";
+      navigate("/hotspot/koramangala");
     }
   };
 

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function ReportWaste() {
   const handleNonFunctionalAction = (e) => {
     e.preventDefault();
@@ -138,16 +140,15 @@ export default function ReportWaste() {
 
             {/* Submission Action */}
             <div className="submit-section">
-              <button
-                type="button"
-                className="btn btn-submit-demo"
-                disabled
-                aria-disabled="true"
+              <Link
+                to="/report-result"
+                className="btn btn-primary"
+                style={{ padding: '12px 32px' }}
               >
                 SUBMIT REPORT
-              </button>
+              </Link>
               <p className="submit-note">
-                Submission disabled in prototype mode. Pre-filled sample analysis is displayed for evaluation.
+                Click to submit report and view confirmation result.
               </p>
             </div>
           </div>

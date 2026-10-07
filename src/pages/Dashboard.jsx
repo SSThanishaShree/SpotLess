@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import WasteMap from "../components/WasteMap";
 import CaseTypeChart from "../components/CaseTypeChart";
 import StatusChart from "../components/StatusChart";
@@ -184,8 +185,8 @@ export default function Dashboard() {
               <div style={{ marginTop: 16, color: "#545951", fontSize: 13, lineHeight: 1.65 }}>
                 High recurrence with low collection accessibility and high commercial activity.
               </div>
-              <a
-                href="/hotspot/koramangala"
+              <Link
+                to="/hotspot/koramangala"
                 style={{
                   display: "inline-block",
                   marginTop: 16,
@@ -196,7 +197,7 @@ export default function Dashboard() {
                 }}
               >
                 View hotspot details →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
